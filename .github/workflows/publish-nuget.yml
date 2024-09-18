@@ -1,0 +1,46 @@
+# To configure the workflow:
+# - Add a NuGet API key to your repository secrets with the name `NUGET_API_KEY`
+# - Uncomment the steps in the `build`, `pack` and `publish` jobs
+
+name: 🚀 Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  DOTNET_VERSION: "8.0.x"
+  PACKAGE_PATH: "./src/{PACKAGE_NAME}"
+  README_PATH: "./README.md"
+  ICON_LOGO_PATH: "./docs/assets/logo-icon.png"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      
+      - name: Copy logo and README files to project directory
+        run: |
+          cp ${{ env.README_PATH }} ${{ env.PACKAGE_PATH }} && \
+          cp ${{ env.ICON_LOGO_PATH }} ${{ env.PACKAGE_PATH }}
+
+      - name: Restore
+        run: dotnet restore ${{ env.PACKAGE_PATH }}
+
+      - name: Build
+        run: dotnet build ${{ env.PACKAGE_PATH }} --configuration Release --no-restore
+
+      - name: Pack the NuGet package
+        run: dotnet pack ${{ env.PACKAGE_PATH }} --configuration Release --no-restore --output ./nupkg
+      
+      - name: Publish to NuGet
+        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

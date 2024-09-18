@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        
+        <PackageId>FastProjects.{PACKAGE_NAME}</PackageId>
+        <PackageVersion></PackageVersion>
+        <Authors>George Park</Authors>
+
+        <Title>FastProjects.{PACKAGE_NAME}</Title>
+        <Description></Description>
+
+        <PackageProjectUrl>https://github.com/Fast-Projects-NET/FastProjects.{PACKAGE_NAME}</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Fast-Projects-NET/FastProjects.{PACKAGE_NAME}</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageTags>FastProjects</PackageTags>
+        
+        <PackageIcon>logo-icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <ReleaseNotes>
+            * Initial release
+        </ReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="../../docs/assets/logo-icon.png">
+            <Pack>True</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+        <None Update="../../README.md">
+            <Pack>True</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
