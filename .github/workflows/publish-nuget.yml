@@ -12,7 +12,7 @@ on:
 
 env:
   DOTNET_VERSION: "8.0.x"
-  PACKAGE_PATH: "./src/{PACKAGE_NAME}"
+  PACKAGE_PATH: "./src/FastProjects.Endpoints"
   README_PATH: "./README.md"
   ICON_LOGO_PATH: "./docs/assets/logo-icon.png"
 

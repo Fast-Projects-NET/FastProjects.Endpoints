@@ -1,23 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        
-        <PackageId>FastProjects.{PACKAGE_NAME}</PackageId>
-        <PackageVersion></PackageVersion>
+
+
+        <PackageId>FastProjects.Endpoints</PackageId>
+        <PackageVersion>1.0.7</PackageVersion>
         <Authors>George Park</Authors>
 
-        <Title>FastProjects.{PACKAGE_NAME}</Title>
-        <Description></Description>
+        <Title>FastProjects.Endpoints</Title>
+        <Description>Collection of endpoint base classes that wraps FastEndpoints classes and integrated with MediatR and Result patterns.</Description>
 
-        <PackageProjectUrl>https://github.com/Fast-Projects-NET/FastProjects.{PACKAGE_NAME}</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/Fast-Projects-NET/FastProjects.{PACKAGE_NAME}</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Fast-Projects-NET/FastProjects.Endpoints</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Fast-Projects-NET/FastProjects.Endpoints</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageTags>FastProjects</PackageTags>
-        
+
         <PackageIcon>logo-icon.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
 
@@ -25,6 +26,12 @@
             * Initial release
         </ReleaseNotes>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FastEndpoints" />
+      <PackageReference Include="FastProjects.ResultPattern" />
+      <PackageReference Include="MediatR" />
+    </ItemGroup>
 
     <ItemGroup>
         <None Update="../../docs/assets/logo-icon.png">
@@ -36,4 +43,5 @@
             <PackagePath>/</PackagePath>
         </None>
     </ItemGroup>
+
 </Project>

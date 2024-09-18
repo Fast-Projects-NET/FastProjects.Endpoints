@@ -19,7 +19,7 @@ on:
 
 env:
   DOTNET_VERSION: "8.0.x"
-  SOLUTION_PATH: "./{SOLUTION_PATH}"
+  SOLUTION_PATH: "./FastProjects.Endpoints.sln"
 
 jobs:
   build:
