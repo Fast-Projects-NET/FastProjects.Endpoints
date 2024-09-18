@@ -7,7 +7,7 @@
 
 
         <PackageId>FastProjects.Endpoints</PackageId>
-        <PackageVersion>1.0.7</PackageVersion>
+        <PackageVersion>1.0.8</PackageVersion>
         <Authors>George Park</Authors>
 
         <Title>FastProjects.Endpoints</Title>
