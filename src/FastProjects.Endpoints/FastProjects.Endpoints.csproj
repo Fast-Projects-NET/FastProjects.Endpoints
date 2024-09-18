@@ -34,11 +34,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="../../docs/assets/logo-icon.png">
+        <None Update="logo-icon.png">
             <Pack>True</Pack>
             <PackagePath>/</PackagePath>
         </None>
-        <None Update="../../README.md">
+        <None Update="README.md">
             <Pack>True</Pack>
             <PackagePath>/</PackagePath>
         </None>
