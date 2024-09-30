@@ -1,12 +1,3 @@
-# To configure the repository template:
-
-1. Update workflows. If you use CodeQL, rename the `codeql.yml.example` to `codeql.yml`.
-2. Create a solution file and add projects to `.src/` or `.tests/` folders.
-3. Fill the information in `.nuspec` file about nuget package.
-4. Update `README.md` file (also, remove this section).
-
-___
-
 # 🚀 **FastProjects.Endpoints**
 
 ![Build Status](https://github.com/Fast-Projects-NET/FastProjects.Endpoints/actions/workflows/test.yml/badge.svg)
